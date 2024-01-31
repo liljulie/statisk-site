@@ -1,0 +1,135 @@
+/* Reset CSS */
+
+/* Gør siden mere responsiv ved at tilføje box-sizing */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Basale styling for hele siden */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #FDF7E4; /* Ændret baggrundsfarve */
+}
+
+/* Centrér teksten i headeren */
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 24px;
+  font-family: 'Arial', sans-serif; /* Ændret font til Arial */
+  font-weight: normal; /* Fjernet fed skrift */
+  color: #333; /* Ændret tekstfarve */
+}
+
+/* Stil for navigationsmenuen */
+.navbar {
+  background-color: #333;
+  padding: 20px 0;
+}
+
+.nav_menu {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.nav_menu li {
+  margin: 0 20px;
+}
+
+.nav_menu a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav_menu a:hover {
+  color: #ff6600;
+}
+
+/* Stil for kategori container */
+.kategori_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  background-color: #FAEED1; /* Ændret baggrundsfarve */
+}
+
+.kategori_item {
+  border: 1px solid #DED0B6; /* Ændret kantfarve */
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.kategori_item:hover {
+  background-color: #BBAB8C; /* Ændret baggrundsfarve ved hover */
+}
+
+/* Stil for produkt container */
+.produkt_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #FAEED1; /* Ændret baggrundsfarve */
+}
+
+.produkt_item {
+  width: 300px;
+  padding: 20px;
+  background-color: #DED0B6; /* Ændret baggrundsfarve */
+  text-align: center;
+  border: 1px solid #BBAB8C; /* Ændret kantfarve */
+}
+
+.produkt_item img {
+  max-width: 100%;
+}
+
+.produkt_item h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.produkt_item p {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Stil for udsolgte produkter */
+.udsolgt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.udsolgt p {
+  font-size: 24px;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .kategori_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .produkt_container {
+    justify-content: flex-start;
+  }
+}
